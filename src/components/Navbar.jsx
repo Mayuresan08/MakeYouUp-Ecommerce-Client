@@ -114,7 +114,7 @@ const [search,setSearch]=useState(value)
                  {
                         user.currentUser &&
                         <>
-                        <Item><p style={{width:"5.8rem"}}>Hi, {user.currentUser.username}</p></Item>
+                        <Item><p style={{width:"6rem"}}>Hi, {user.currentUser.username}</p></Item>
                         </>
                     }
                     <Link  style={{textDecoration:"none",color:"inherit"}} to={"/products"}><Item> <p>Explore</p></Item></Link>
