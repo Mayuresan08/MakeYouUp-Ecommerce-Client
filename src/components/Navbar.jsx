@@ -18,10 +18,21 @@ padding: 10px 20px;
 display: flex;
 flex-wrap: nowrap;
 align-items: center;
-justify-content: space-between;
+justify-content: space-around;
 height: 60px;
 ${medium({height:"50px",padding:" 10px 0"})}
 `
+const SmallDiv=styled.div`
+padding: 10px 20px;
+display: none;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: space-between;
+height: 60px;
+${medium({height:"50px",padding:" 10px 0"})}
+${small({display:"flex"})}
+`
+
 
 const Left =styled.div`
 font-family: 'Cookie', cursive;
@@ -70,7 +81,8 @@ display: flex;
 gap: 0.8rem;
 justify-content: end;
 ${medium({flex:"0",marginRight:"0.65rem"})}
-${small({fontSize:"0.6rem !important" ,gap:"0.2rem"})}
+/* ${small({fontSize:"0.6rem !important" ,gap:"0.2rem"})} */
+${small({display:"none"})}
 `
 const Item=styled.div`
 /* cursor:pointer; */
@@ -145,6 +157,40 @@ const [search,setSearch]=useState(value)
                     
                  </Right>
              </Wrapper>
+             <SmallDiv>
+             {
+                        user.currentUser &&
+                        <>
+                        <Item><p style={{width:"5.5rem"}}>Hi, {user.currentUser.username}</p></Item>
+                        </>
+                    }
+                    <Link  style={{textDecoration:"none",color:"inherit"}} to={"/products"}><Item> <p>Explore</p></Item></Link>
+                    {!user.currentUser &&
+                    <>
+                   <Link to="/login" style={{textDecoration:"none",color:"inherit"}}> <Item> <p>LogIn</p></Item></Link>
+                   <Link to="/register" style={{textDecoration:"none",color:"inherit"}}> <Item> <p>Register</p></Item></Link>
+                    </>
+                    }
+                    {
+                        user.currentUser &&
+                        <>
+                        <Item><p onClick={()=>{
+                            dispatch({type:"logOut"})
+                            history.push("/")
+                            }}>LogOut</p></Item>
+                        </>
+                    }
+                    <Item>
+                       <Link style={{color:"inherit"}} to="/cart"> <p><Badge color="primary" badgeContent={quantity}>
+                            <ShoppingCartOutlined/>
+                            </Badge></p></Link>
+                            </Item>
+
+                    <Item>
+                        <Link style={{color:"inherit"}} to="/order"><LocalMallOutlined/></Link>
+                    </Item>
+                    
+             </SmallDiv>
         </NavContainer>
     )
 }

@@ -1,6 +1,7 @@
 import { Email, EmailOutlined, LinkedIn, LocationCity, Phone, PhoneAndroidOutlined } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
+import {medium, small} from "../responsive"
 
 const MainContainer=styled.div`
 height: 100%;
@@ -12,6 +13,7 @@ display:flex;
 justify-content: space-between;
 padding: 1rem;
 gap:3rem;
+${small({display:"inline"})}
 `
 const Left=styled.div`
 display: flex;
@@ -32,6 +34,7 @@ background-color: black;
 color: white;
 align-items: center;
 justify-content: space-between;
+${medium({display:"none"})}
 `
 
 export default function Footer() {
