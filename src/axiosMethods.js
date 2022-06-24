@@ -1,10 +1,7 @@
 import axios from "axios";
 
+const BASE_URL = "https://makeyouup.herokuapp.com/";
 
-const BASE_URL="https://makeyouup-server.herokuapp.com/";
-
-
-export const publicRequest=axios.create({
-    baseURL:BASE_URL
-})
-
+export const publicRequest = axios.create({
+  baseURL: BASE_URL,
+});
