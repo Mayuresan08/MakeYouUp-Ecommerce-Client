@@ -91,7 +91,7 @@ export default function Cart() {
       try {
         console.log(cart.total);
         const res = await axios.post(
-          "https://makeyouup.herokuapp.com/checkout/payment",
+          "https://ecommercebackend-o0yl.onrender.com/checkout/payment",
           {
             tokenId: stripeToken.id,
             amount: 500,

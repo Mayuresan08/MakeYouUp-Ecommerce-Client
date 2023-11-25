@@ -53,11 +53,14 @@ export default function AdminUserList() {
   const getUsers = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`https://makeyouup.herokuapp.com/users`, {
-        headers: {
-          token: user.currentUser.token,
-        },
-      });
+      const res = await axios.get(
+        `https://ecommercebackend-o0yl.onrender.com/users`,
+        {
+          headers: {
+            token: user.currentUser.token,
+          },
+        }
+      );
       setUsers(res.data);
       setLoading(false);
     } catch {}
@@ -70,7 +73,7 @@ export default function AdminUserList() {
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(
-        `https://makeyouup.herokuapp.com/users/${id}`,
+        `https://ecommercebackend-o0yl.onrender.com/users/${id}`,
         {
           headers: {
             token: user.currentUser.token,

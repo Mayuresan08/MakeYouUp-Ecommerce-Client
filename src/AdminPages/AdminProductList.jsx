@@ -66,7 +66,9 @@ export default function AdminProductList() {
 
   const getProducts = async () => {
     try {
-      const res = await axios.get(`https://makeyouup.herokuapp.com/product`);
+      const res = await axios.get(
+        `https://ecommercebackend-o0yl.onrender.com/product`
+      );
       setProducts(res.data);
       setLoading(false);
     } catch {}
@@ -79,7 +81,7 @@ export default function AdminProductList() {
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(
-        `https://makeyouup.herokuapp.com/product/${id}`,
+        `https://ecommercebackend-o0yl.onrender.com/product/${id}`,
         {
           headers: {
             token: user.currentUser.token,

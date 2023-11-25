@@ -156,7 +156,7 @@ export default function AdminProductAdd() {
             };
             console.log(Product);
             const res = axios.post(
-              `https://makeyouup.herokuapp.com/product/`,
+              `https://ecommercebackend-o0yl.onrender.com/product/`,
               Product,
               {
                 headers: {

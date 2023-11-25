@@ -100,7 +100,7 @@ export default function Register() {
               try {
                 const { confirmPassword, ...other } = values;
                 const res = await axios.post(
-                  "https://makeyouup.herokuapp.com/auth/register",
+                  "https://ecommercebackend-o0yl.onrender.com/auth/register",
                   other
                 );
                 console.log(res);

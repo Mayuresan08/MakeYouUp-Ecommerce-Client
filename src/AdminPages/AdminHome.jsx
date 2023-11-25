@@ -67,7 +67,7 @@ export const AdminHome = () => {
     const getStats = async () => {
       try {
         const res = await axios.get(
-          `https://makeyouup.herokuapp.com/users/stats`,
+          `https://ecommercebackend-o0yl.onrender.com/users/stats`,
           {
             headers: {
               token: user.currentUser.token,

@@ -94,7 +94,7 @@ export default function ResetPassword() {
 
               try {
                 const response = await axios.post(
-                  `https://makeyouup.herokuapp.com/auth/verifyAndUpdatePassword/${id}/${token}`,
+                  `https://ecommercebackend-o0yl.onrender.com/auth/verifyAndUpdatePassword/${id}/${token}`,
                   {
                     password: values.password,
                   }

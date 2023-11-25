@@ -17,11 +17,14 @@ export default function TranscationNum() {
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const res = await axios.get(`https://makeyouup.herokuapp.com/order`, {
-          headers: {
-            token: user.currentUser.token,
-          },
-        });
+        const res = await axios.get(
+          `https://ecommercebackend-o0yl.onrender.com/order`,
+          {
+            headers: {
+              token: user.currentUser.token,
+            },
+          }
+        );
         setOrders(res.data);
       } catch {}
     };

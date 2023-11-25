@@ -18,7 +18,7 @@ export default function UserNum() {
     const getUsers = async () => {
       try {
         const res = await axios.get(
-          `https://makeyouup.herokuapp.com/users/?new=true`,
+          `https://ecommercebackend-o0yl.onrender.com/users/?new=true`,
           {
             headers: {
               token: user.currentUser.token,

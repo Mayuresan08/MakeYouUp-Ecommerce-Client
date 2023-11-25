@@ -119,7 +119,7 @@ export default function AdminUserAdd() {
                   const { confirmPassword, ...others } = { ...values };
                   try {
                     const res = await axios.post(
-                      `https://makeyouup.herokuapp.com/auth/register`,
+                      `https://ecommercebackend-o0yl.onrender.com/auth/register`,
                       others
                     );
 

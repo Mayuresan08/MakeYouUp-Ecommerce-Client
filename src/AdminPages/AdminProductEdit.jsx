@@ -94,7 +94,7 @@ export default function AdminProductEdit() {
     const getProduct = async () => {
       try {
         const res = await axios.get(
-          `https://makeyouup.herokuapp.com/product/find/${params.id}`
+          `https://ecommercebackend-o0yl.onrender.com/product/find/${params.id}`
         );
         setProduct(res.data);
         setLoading(false);
@@ -144,7 +144,7 @@ export default function AdminProductEdit() {
                     console.log(values);
                     try {
                       const res = await axios.put(
-                        `https://makeyouup.herokuapp.com/product/${params.id}`,
+                        `https://ecommercebackend-o0yl.onrender.com/product/${params.id}`,
                         values,
                         {
                           headers: {

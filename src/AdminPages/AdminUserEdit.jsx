@@ -71,7 +71,7 @@ export default function AdminUserEdit() {
   const getUser = async () => {
     try {
       const res = await axios.get(
-        `https://makeyouup.herokuapp.com/users/find/${params.id}`,
+        `https://ecommercebackend-o0yl.onrender.com/users/find/${params.id}`,
         {
           headers: {
             token: Puser.currentUser.token,
@@ -117,7 +117,7 @@ export default function AdminUserEdit() {
                     console.log(values);
                     try {
                       const res = await axios.put(
-                        `https://makeyouup.herokuapp.com/users/${params.id}`,
+                        `https://ecommercebackend-o0yl.onrender.com/users/${params.id}`,
                         values,
                         {
                           headers: {

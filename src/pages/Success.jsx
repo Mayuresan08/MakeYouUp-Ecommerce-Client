@@ -31,7 +31,7 @@ export default function Success() {
       try {
         console.log("in send");
         const res = await axios.post(
-          "https://makeyouup.herokuapp.com/order",
+          "https://ecommercebackend-o0yl.onrender.com/order",
           {
             userId: user.currentUser._id,
             products: cart.products.map((item) => ({
